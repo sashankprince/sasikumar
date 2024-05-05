@@ -196,8 +196,8 @@ resource "aws_db_instance" "default" {
   instance_class         = "db.t2.micro"
   multi_az               = false
   db_name                = "mydb"
-  username               = "sashank"
-  password               = "sashank#12345"
+  username               = "raham"
+  password               = "Rahamshaik#444555"
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
