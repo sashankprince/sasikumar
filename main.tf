@@ -8,8 +8,8 @@ terraform {
 }
 
 # Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
+provider "aws": {
+  region = "ap-south-1"
 }
 
 # Create a VPC
