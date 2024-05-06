@@ -313,7 +313,7 @@ resource "aws_lb" "external-elb" {
   subnets            = [aws_subnet.web-subnet-1.id, aws_subnet.web-subnet-2.id]
 }
 
-resource "aws_lb_target_group" "external-elb:" {
+resource "aws_lb_target_group" "external-elb" {
   name     = "ALB-TG"
   port     = 80
   protocol = "HTTP"
