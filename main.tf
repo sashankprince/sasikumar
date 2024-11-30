@@ -138,7 +138,7 @@ resource "aws_instance" "webserver1" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "nvj"
+  key_name               = "sasi.pem"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
   user_data              = "${file("apache.sh")}"
