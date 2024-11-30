@@ -351,35 +351,38 @@ resource "aws_lb_listener" "external-elb" {
   }
 }
 
+resource "aws_db_instance" "default" {
+  allocated_storage     = 10
+  db_subnet_group_name  = aws_db_subnet_group.default.id
+  engine                = "mysql"
+  engine_version        = "8.0.28"
+  instance_class        = "db.t2.micro"
+  multi_az              = "false"
+  db_name               = "mydb"
+  username              = "sashank"
+  password              = "sashank#12345"
+  skip_final_snapshort  = true
+  vpc_security_group_ids = [aws_security_group.database-sg.id]
+}
 
+resource "aws_db_subnet_group" "default" {
+  name       = "main"
+  subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
+}
 
+resource "aws_db_subnet-group" "default" {
+  name       = "main"
+  subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 
-output "lb_dns_name" {
+  tags = {
+    Name = "My DB subnet group"
+}
+}
+
+output "Ib_dn_name" {
   description = "The DNS name of the load balancer"
-  value       = aws_lb.external-elb.dns_name
+  value       =  aws_Ib.external-elb.dns_name
 }
 
 
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "sasikumar"  
 
-  acl    = "private"  
-  versioning {
-    enabled = true 
-  }
-}
-
-resource "aws_iam_user" "one" {
-for_each = var.iam_users
-name = each.value
-}
-
-variable "iam_users" {
-description = ""
-type = set(string)
-default = ["user1", "user2", "user3", "user4"]
-}
-
-resource "aws_iam_group" "two" {
-name = "sasikumar"
-}
