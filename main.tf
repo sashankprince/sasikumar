@@ -369,10 +369,11 @@ resource "aws_db_subnet_group" "default_instance4" {
   name       = "my-db-subnet-group"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 }
-tags = 
-Name = "My DB subnet swiggy"
-environment = "production"
+tags = {
+  Name        = "My DB subnet swiggy"
+  environment = "production"
 }
+
 
 output "Ib_dns_name" {
   value       =  aws_Ib.external-elb.dns_name
