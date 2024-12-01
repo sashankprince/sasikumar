@@ -370,8 +370,7 @@ resource "aws_db_subnet_group" "default_instance4" {
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 }
 
- tags = {
-    Name = "My DB subnet group"
+Name = "My DB subnet group"
 }
 
 output "Ib_dns_name" {
