@@ -366,12 +366,12 @@ resource "aws_db_instance" "default_instance2" {
 }
 
 resource "aws_db_subnet_group" "default_instance4" {
-  name       = "main"
+  name       = "my-db-subnet-group"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 }
 
 resource "aws_db_subnet-group" "default" {
-  name       = "main"
+  name       = "my-db-subnet-group"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 
   tags = {
