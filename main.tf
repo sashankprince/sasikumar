@@ -378,6 +378,7 @@ resource "aws_db_subnet-group" "default" {
   tags = {
     Name = "My DB subnet group"
 }
+}
 
 
 output "Ib_dns_name" {
