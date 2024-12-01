@@ -373,8 +373,6 @@ resource "aws_db_subnet_group" "default_instance4" {
  tags = {
     Name = "My DB subnet group"
 }
-}
-
 
 output "Ib_dns_name" {
   value       =  aws_Ib.external-elb.dns_name
