@@ -378,7 +378,7 @@ resource "aws_db_subnet-group" "default" {
   tags = { 
     Name = "My DB subnet group swiggy"
 }
-}
+
 
 output "Ib_dns_name" {
   value       =  aws_Ib.external-elb.dns_name
