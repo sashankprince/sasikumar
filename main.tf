@@ -372,7 +372,8 @@ resource "aws_db_subnet_group" "default_instance4" {
 
 resource "aws_db_subnet-group" "default" {
   name       = "my-db-subnet-group"
-  subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
+  subnet_ids = ["subnet-12345", "subnet-67890"]
+}
 
   tags = {
     Name = "My DB subnet group"
