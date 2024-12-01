@@ -310,7 +310,7 @@ resource "aws_lb" "external-elb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = ["sg-abc123"]
-  subnets            = [aws_subnet.web-subnet-1.id, aws_subnet.web-subnet-2.id]
+  subnets            = ["subnet-abc123", "subnet-def456"]
 }
 
 resource "aws_lb_target_group" "external-elb" {
