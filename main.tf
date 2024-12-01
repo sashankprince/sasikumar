@@ -369,9 +369,10 @@ resource "aws_db_subnet_group" "default_instance4" {
   name       = "my-db-subnet-group"
   subnet_ids = ["subnet-12345", "subnet-12344"]
 }
-tags {
+tags = {
   Name        = "My DB subnet swiggy"
   environment = "production"
+}
 }
 
 
