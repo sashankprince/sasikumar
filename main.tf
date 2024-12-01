@@ -190,7 +190,7 @@ resource "aws_instance" "appserver2" {
 
 resource "aws_db_instance" "default_instance1" {
   allocated_storage      = 10
-  db_subnet_group_name   = "aws_db_subnet_group" "swiggy" {
+  db_subnet_group_name   = aws_db_subnet_group swiggy.id {
   engine                 = "mysql"
   engine_version         = "8.0.28"
   instance_class         = "db.t2.micro"
