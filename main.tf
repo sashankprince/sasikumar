@@ -375,13 +375,13 @@ resource "aws_db_subnet-group" "default" {
   subnet_ids = ["subnet-12345", "subnet-67890"]
 }
 
-  tags {
+  tags = {
     Name = "My DB subnet group swiggy"
 }
-
+}
 output "Ib_dns_name" { 
   decription = "The DNS name of the load balancer"
-  value       =  aws_Ib.external-elb.dns_name
+  value      =  aws_Ib.external-elb.dns_name
 }
 
 
