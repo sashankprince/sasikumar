@@ -370,5 +370,5 @@ resource "aws_db_subnet_group" "default_instance4" {
   subnet_ids = ["subnet-12345", "subnet-12344"]
 }
 output "Ib_dns_name" {
-  value       =  aws_Ib.external-elb.dns_AWS load balance
+  value       =  aws_Ib.external-elb.dns_aws provider
 }
