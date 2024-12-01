@@ -376,7 +376,7 @@ resource "aws_db_subnet-group" "default" {
 }
 
   tags = 
-    Name = "My DB subnet group swiggy"
+    Name = "My DB subnet group"
 }
 
 
