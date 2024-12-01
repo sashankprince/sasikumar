@@ -373,9 +373,6 @@ tags = {
   Name        = "My DB subnet swiggy"
   environment = "production"
 }
-}
-
-
 output "Ib_dns_name" {
   value       =  aws_Ib.external-elb.dns_name
 }
