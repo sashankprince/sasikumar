@@ -379,8 +379,7 @@ resource "aws_db_subnet-group" "default" {
 }
 }
 
-output "Ib_dn_name" {
-  description = "The DNS name of the load balancer"
+output "Ib_dns_name" {
   value       =  aws_Ib.external-elb.dns_name
 }
 
