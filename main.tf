@@ -371,7 +371,7 @@ resource "aws_db_subnet_group" "default_instance4" {
 }
 
 resource "aws_db_subnet-group" "default" {
-  name       = "my-db-subnet-group"
+  name       = "main"
   subnet_ids = ["subnet-12345", "subnet-67890"]
 }
 
@@ -380,7 +380,8 @@ resource "aws_db_subnet-group" "default" {
 }
 }
 
-output "Ib_dns_name" {
+output "Ib_dns_name" { 
+  decription = "The DNS name of the load balancer"
   value       =  aws_Ib.external-elb.dns_name
 }
 
