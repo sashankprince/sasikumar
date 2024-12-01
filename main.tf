@@ -202,7 +202,7 @@ resource "aws_db_instance" "default_instance1" {
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
 
-resource "aws_db_subnet_group" "default_instance1" {
+resource "aws_db_subnet_group" "default_instance3" {
   name       = "main"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 
@@ -351,7 +351,7 @@ resource "aws_lb_listener" "external-elb" {
   }
 }
 
-resource "aws_db_instance" "default_instance1" {
+resource "aws_db_instance" "default_instance2" {
   allocated_storage     = 10
   db_subnet_group_name  = aws_db_subnet_group.default.id
   engine                = "mysql"
@@ -365,7 +365,7 @@ resource "aws_db_instance" "default_instance1" {
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
 
-resource "aws_db_subnet_group" "default_instance1" {
+resource "aws_db_subnet_group" "default_instance4" {
   name       = "main"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
 }
